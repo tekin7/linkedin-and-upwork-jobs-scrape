@@ -23,7 +23,7 @@ class upwork:
         data = {}
         data['upwork'] =[]
         print("\n Job posting searching... \n") 
-        while self.page <= 1:
+        while self.page <= 10:
             self.browser.get("https://www.upwork.com/search/jobs/?category2_uid=531770282580668423&page="+str(self.page)+"&sort=recency")
             links = self.browser.find_elements_by_xpath("//a[@class='job-title-link break visited']")
             for link in links:
